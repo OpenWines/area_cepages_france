@@ -19,7 +19,7 @@ Sometimes, for some cepages, you will have non existing value a year and a year 
 
 ## Preparation
 
-This package include the scripts to automate data retrieving and filtering. it relies on various utilities like pdftohtml to extract PDF content, a Python script and varous Unix command line utilities. We do not warranty that it will work on Windows computer.
+This package includes the scripts to automate data retrieving and filtering. it relies on various utilities like pdftohtml to extract PDF content, a Python script and varous Unix command line utilities. We do not warranty that it will work on Windows computer.
 
 You just have to do the following
 
