@@ -1,0 +1,48 @@
+{
+  "name": "area_cepages_france",
+  "title": "Area of the French wine cepages per year",
+  "homepage": "http://openwines.eu",
+  "version": "0.1.0",
+  "license": "PDDL-1.0",
+  "resources": [
+    {
+      "name": "area_cepages_france_yearly",
+      "path": "data/area_cepages_france_yearly.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 17179,
+      "schema": {
+        "fields": [
+          {
+            "name": "type_cepage",
+            "type": "string",
+            "description": "Cepage type"
+          },
+          {
+            "name": "surface_ha",
+            "type": "number",
+            "description": "Surface (in hectares)"
+          },
+          {
+            "name": "wine_surface_proportion",
+            "type": "number",
+            "description": "Cepage proportion for wine"
+          },
+          {
+            "name": "year",
+            "type": "integer",
+            "description": "Year of the data"
+          }
+        ]
+      }
+    }
+  ],
+  "description": "Area of the French wine cepages per year",
+  "maintainers": [
+    {
+    "name": "Thomas Gratier",
+    "email": "thomas_gratier@yahoo.fr"
+    }
+  ],
+  "contributors":[]
+}
