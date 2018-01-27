@@ -1,16 +1,23 @@
 {
   "name": "area_cepages_france",
-  "title": "Area of the French wine cepages per year",
+  "title": "Area of the French wine cépages per year",
+  "description": "Aggregated by OpenWines.eu, 2006-2014",
   "homepage": "http://openwines.eu",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "PDDL-1.0",
+  "sources": [
+    {
+      "name": "Observatoire de la viticulture française - FranceAgriMer",
+      "web": "http://www.observatoire-viti-france.com/"
+    }
+  ],
   "resources": [
     {
       "name": "area_cepages_france_yearly",
       "path": "data/area_cepages_france_yearly.csv",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 17179,
+      "bytes": 18241,
       "schema": {
         "fields": [
           {
@@ -37,12 +44,16 @@
       }
     }
   ],
-  "description": "Area of the French wine cepages per year",
   "maintainers": [
     {
     "name": "Thomas Gratier",
     "email": "thomas_gratier@yahoo.fr"
     }
   ],
-  "contributors":[]
+  "contributors":[
+    {
+      "name": "School of Data CH",
+      "website": "http://schoolofdata.ch"
+    }
+  ]
 }

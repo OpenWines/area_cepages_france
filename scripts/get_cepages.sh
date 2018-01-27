@@ -1,4 +1,4 @@
-limits=( 07 08 09 10 11 12 13)
+limits=( 07 08 09 10 11 12 13 14 )
 
 for i in "${limits[@]}"
 do

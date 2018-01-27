@@ -9,6 +9,7 @@ list_files = glob('output_*.xml')
 
 for file_input in list_files:
     filename = file_input.split('.')[0]
+    print ("Processing %s" % filename)
     with open(filename + '.csv', 'wb') as csvfile:
         output_file = csv.writer(
             csvfile,
@@ -64,23 +65,18 @@ for file_input in list_files:
             else:
                 left_right['right'].append(tag.text)
         source = left_right['left']
-        source = [
-            i.encode('utf-8').replace(
-                u'\xa0',
-                ''
-            ).replace(
-                u' ',
-                ''
-            ) if re.match(
-                r"^[\d \xa0]*$",
-                i
-            ) is not None else i.encode('utf-8').replace(
-                u'%',
-                ''
-            ).replace(u',', '.') for i in source]
-
-        for i in range(0, len(source)):
+        source_conv = []
+        for i in source:
+            if re.match(r"^[\d \xa0]*$", i) is not None:
+                i = i.encode('ascii', 'ignore') # clear non-ordinals
+                i = i.replace(' ', '')
+            else:
+                i = i.replace('%', '')
+                i = i.replace(',', '.')
+            i = i.encode('utf-8')
+            source_conv.append(i)
+        for i in range(0, len(source_conv)):
             if i % 3 == 0:
-                line = source[i:i + 3]
+                line = source_conv[i:i + 3]
                 line.append('20' + filename.replace('output_', ''))
                 output_file.writerow(line)
